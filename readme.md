@@ -2,23 +2,22 @@
 
 ## Welcome to Comentarismo WordPress Plugin
 
+This is the GitHub Repository for the Comentarismo Wordpress Plugin
 
 
+# License: [license.md](license.md)
 
-# License: [license.md]()
-```
-Author: CreativeMindsSolutions
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-```
+# Scripts:
 
 
+## CSS
 ```
 .hidden {
 	display:none !important;
 }
 ```
 
+## Javascript
 
 ```
 <script src="http://api.comentarismo.com/static/js/build/comentarismo-client.js"></script>
