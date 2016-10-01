@@ -1,0 +1,213 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Comentarismo\n"
+"POT-Creation-Date: 2015-08-17 08:31+0100\n"
+"PO-Revision-Date: 2015-08-17 08:31+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: views\n"
+"X-Poedit-SearchPath-2: classes\n"
+
+#: classes/class.cm-handfsl-backend.php:117
+msgid "Scripts & Styles"
+msgstr ""
+
+#: classes/class.cm-handfsl-backend.php:120
+#: classes/class.cm-handfsl-backend.php:663
+msgid "Settings"
+msgstr ""
+
+#: classes/class.cm-handfsl-backend.php:121
+#: classes/class.cm-handfsl-backend.php:672
+msgid "About"
+msgstr ""
+
+#: classes/class.cm-handfsl-backend.php:124
+msgid "User Guide"
+msgstr ""
+
+#: classes/class.cm-handfsl-backend.php:523
+msgid "Enable"
+msgstr ""
+
+#: classes/class.cm-handfsl-backend.php:524
+msgid "Disable"
+msgstr ""
+
+#: classes/class.cm-handfsl-backend.php:525
+msgid "Default"
+msgstr ""
+
+#: classes/class.cm-handfsl-backend.php:526
+msgid "Label"
+msgstr ""
+
+#: classes/class.licensing_api.php:127
+#, php-format
+msgid "%s - License Options"
+msgstr ""
+
+#: classes/class.licensing_api.php:183
+msgid "active"
+msgstr ""
+
+#: classes/class.licensing_api.php:184
+msgid "Deactivate License"
+msgstr ""
+
+#: classes/class.licensing_api.php:188
+msgid "Activate License"
+msgstr ""
+
+#: classes/class.licensing_api.php:222
+#, php-format
+msgid "%s - Version Update"
+msgstr ""
+
+#: views/settings.phtml:19 views/settings.phtml:53
+msgid "Script Name"
+msgstr ""
+
+#: views/settings.phtml:20 views/settings.phtml:54
+msgid "Script Code"
+msgstr ""
+
+#: views/settings.phtml:23 views/settings.phtml:57
+msgid "Script Type"
+msgstr ""
+
+#: views/settings.phtml:25 views/settings.phtml:59
+msgid "CSS"
+msgstr ""
+
+#: views/settings.phtml:26 views/settings.phtml:60
+msgid "JS"
+msgstr ""
+
+#: views/settings.phtml:28 views/settings.phtml:62
+msgid "Script Location"
+msgstr ""
+
+#: views/settings.phtml:30 views/settings.phtml:64
+msgid "Header Script"
+msgstr ""
+
+#: views/settings.phtml:31 views/settings.phtml:65
+msgid "Footer Script"
+msgstr ""
+
+#: views/settings.phtml:33 views/settings.phtml:67
+msgid "Autoload Option"
+msgstr ""
+
+#: views/settings.phtml:35 views/settings.phtml:69
+msgid "Load by default on All Posts and Pages"
+msgstr ""
+
+#: views/settings.phtml:36 views/settings.phtml:70
+msgid "Load On Specific Posts"
+msgstr ""
+
+#: views/settings.phtml:37 views/settings.phtml:71
+msgid "Don’t load by default"
+msgstr ""
+
+#: views/settings.phtml:41 views/settings.phtml:75
+msgid "Include this script on selected post types:"
+msgstr ""
+
+#: views/settings.phtml:45 views/settings.phtml:79
+msgid "Delete"
+msgstr ""
+
+#: views/settings.phtml:82
+msgid "Add new"
+msgstr ""
+
+#: views/settings.phtml:85
+msgid "Save Changes"
+msgstr ""
+
+#: views/sharebox.phtml:38
+msgid "Share your Appreciation"
+msgstr ""
+
+#: views/sharebox.phtml:41
+msgid "Submit a review"
+msgstr ""
+
+#: views/sharebox.phtml:46
+msgid "Tweet"
+msgstr ""
+
+#: views/sharebox.phtml:50
+msgid "Stay Up-to-Date"
+msgstr ""
+
+#: views/sharebox.phtml:51
+msgid "Follow @CMPLUGINS"
+msgstr ""
+
+#: views/sharebox.phtml:94
+msgid "CM Newsletter - coupons, deals, news"
+msgstr ""
+
+#: views/top.phtml:4
+msgid "Plugin Usage Instructions:"
+msgstr ""
+
+#: views/top.phtml:4
+msgid "Show/Hide"
+msgstr ""
+
+#: views/top.phtml:8
+msgid ""
+"Fill the <strong>\"Script Name\"</strong> field and paste <strong>\"Script "
+"Code\"</strong>"
+msgstr ""
+
+#: views/top.phtml:9
+msgid ""
+"Select <strong>\"Script Type\"</strong> (CSS or JS), <strong>\"Script "
+"Location\"</strong> (header or footer), and <strong>\"Autoload Option\"</"
+"strong>"
+msgstr ""
+
+#: views/top.phtml:10
+msgid ""
+"Check <strong>\"Custom Post Types\"</strong> on which script should be "
+"loaded if necessary"
+msgstr ""
+
+#: views/top.phtml:11
+msgid "Click <strong>\"Save Changes\"</strong>"
+msgstr ""
+
+#: views/top.phtml:12
+msgid "Go to post or page to enable script for singular post/page if necessary"
+msgstr ""
+
+#: views/top.phtml:19
+msgid ""
+"Warning! This option will completely erase all of the data stored by the CM "
+"Header & Footer Script Loader in the database: items, options etc. <br/> It "
+"cannot be reverted.\""
+msgstr ""
+
+#: views/top.phtml:20
+msgid ""
+"All database items of Comentarismo (scripts, custom "
+"include settings) will be erased. This cannot be reverted."
+msgstr ""
+
+#: views/top.phtml:21
+msgid "Clenup database"
+msgstr ""

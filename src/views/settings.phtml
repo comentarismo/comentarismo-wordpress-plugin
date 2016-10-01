@@ -1,0 +1,84 @@
+<?php include 'top.phtml'; ?>
+
+<form class="repeater" method="post" action="">
+	<div data-repeater-list="form-item">
+	<?php
+
+		$scripts = get_option( ComentarismoWP::$plugin_slug . '_scripts' );
+		$scripts = maybe_unserialize( $scripts );
+
+		if( isset( $scripts )
+		&& is_array( $scripts )
+		&& ! empty( $scripts ) )
+		{
+			foreach( $scripts as $ID => $script ){
+
+		?>
+			<div data-repeater-item class="repeater-item">
+				<div class="column half">
+					<textarea type="text" name="item-code" class="item-code" placeholder="<?php _e( 'Script Code', ComentarismoWP::$plugin_text_domain ); ?>" ><?php echo stripslashes( json_decode( $script['item_code'] ) ); ?></textarea>
+				</div>
+				<div class="column auto">
+					<label for="item-type"><?php _e( 'Script Type', ComentarismoWP::$plugin_text_domain ); ?></label>
+					<select class="item-type" name="item-type">
+						<option value="js" <?php selected( $script['item_type'], 'js' ); ?>><?php _e( 'JS', ComentarismoWP::$plugin_text_domain ); ?></option>
+						<option value="css" <?php selected( $script['item_type'], 'css' ); ?>><?php _e( 'CSS', ComentarismoWP::$plugin_text_domain ); ?></option>
+					</select><br />
+					<label for="item-destination"><?php _e( 'Script Location', ComentarismoWP::$plugin_text_domain ); ?></label>
+					<select class="item-destination" name="item-destination">
+						<option value="footer" <?php selected( $script['item_destination'], 'footer' ); ?>><?php _e( 'Footer Script', ComentarismoWP::$plugin_text_domain ); ?></option>
+						<option value="header" <?php selected( $script['item_destination'], 'header' ); ?>><?php _e( 'Header Script', ComentarismoWP::$plugin_text_domain ); ?></option>
+					</select><br />
+					<label for="item-load"><?php _e( 'Autoload Option', ComentarismoWP::$plugin_text_domain ); ?></label>
+					<select class="item-load" name="item-load">
+						<option value="all" <?php selected( $script['item_load'], 'all' ); ?>><?php _e( 'Load by default on All Posts and Pages', ComentarismoWP::$plugin_text_domain ); ?></option>
+						<option value="custom" <?php selected( $script['item_load'], 'custom' ); ?>><?php _e( 'Load On Specific Post Types', ComentarismoWP::$plugin_text_domain ); ?></option>
+						<option value="off" <?php selected( $script['item_load'], 'off' ); ?>><?php _e( 'Don’t load by default', ComentarismoWP::$plugin_text_domain ); ?></option>
+					</select><br />
+				</div>
+				<div class="column auto cpt <?php if( $script['item_load'] != 'custom' ){ echo 'hidden'; } ?>">
+					<p><?php _e( 'Include this script on selected post types:', ComentarismoWP::$plugin_text_domain ); ?></p>
+					<?php echo $this->get_custom_post_types_checkboxes( array( 'public' => true ), $script['item_load_cpt'] ); ?>
+				</div>
+				<input type="hidden" value="<?php echo esc_attr( $ID ); ?>" name="item-ID" class="item_ID" />
+				<input data-repeater-delete type="button" value="<?php _e( 'Delete', ComentarismoWP::$plugin_text_domain ); ?>" class="delete_item button-secondary" />
+			</div>
+		<?php
+			}
+		}
+		?>
+		<div data-repeater-item class="repeater-item">
+			<div class="column half">
+				<textarea type="text" name="item-code" class="item-code" placeholder="<?php _e( 'Script Code', ComentarismoWP::$plugin_text_domain ); ?>" ></textarea>
+			</div>
+			<div class="column auto">
+				<label for="item-type"><?php _e( 'Script Type', ComentarismoWP::$plugin_text_domain ); ?></label>
+				<select class="item-type" name="item-type">
+					<option value="css"><?php _e( 'CSS', ComentarismoWP::$plugin_text_domain ); ?></option>
+					<option value="js"><?php _e( 'JS', ComentarismoWP::$plugin_text_domain ); ?></option>
+				</select><br />
+				<label for="item-destination"><?php _e( 'Script Location', ComentarismoWP::$plugin_text_domain ); ?></label>
+				<select class="item-destination" name="item-destination">
+					<option value="header"><?php _e( 'Header Script', ComentarismoWP::$plugin_text_domain ); ?></option>
+					<option value="footer"><?php _e( 'Footer Script', ComentarismoWP::$plugin_text_domain ); ?></option>
+				</select><br />
+				<label for="item-load"><?php _e( 'Autoload Option', ComentarismoWP::$plugin_text_domain ); ?></label>
+				<select class="item-load" name="item-load">
+					<option value="all"><?php _e( 'Load by default on All Posts and Pages', ComentarismoWP::$plugin_text_domain ); ?></option>
+					<option value="custom"><?php _e( 'Load On Specific Post Types', ComentarismoWP::$plugin_text_domain ); ?></option>
+					<option value="off"><?php _e( 'Don’t load by default', ComentarismoWP::$plugin_text_domain ); ?></option>
+				</select><br />
+			</div>
+			<div class="column auto cpt hidden">
+				<p><?php _e( 'Include this script on selected post types:', ComentarismoWP::$plugin_text_domain ); ?></p>
+				<?php echo $this->get_custom_post_types_checkboxes( array( 'public' => true ) ); ?>
+			</div>
+			<input type="hidden" value="<?php echo $this->get_unique_id(); ?>" name="item-ID" class="item_ID" />
+			<input data-repeater-delete type="button" value="<?php _e( 'Delete', ComentarismoWP::$plugin_text_domain ); ?>" class="delete_item button-secondary" />
+		</div>
+	</div>
+	<input data-repeater-create type="button" value="<?php _e( 'Add new', ComentarismoWP::$plugin_text_domain ); ?>" class="button-primary" />
+	<input type="hidden" value="form_submit" name="add_item_form_submit" />
+	<?php wp_nonce_field( ComentarismoWP::$plugin_slug . '_save_scripts', ComentarismoWP::$plugin_slug . '_save_scripts_nonce' ); ?>
+	<input type="submit" value="<?php _e( 'Save Changes', ComentarismoWP::$plugin_text_domain ); ?>" class="button-primary" />
+</form>

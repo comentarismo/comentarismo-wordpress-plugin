@@ -1,0 +1,103 @@
+a[href*="cm-wordpress-plugins-yearly-membership"]:before {
+	font-size: 16px;
+	vertical-align: middle;
+	padding-right: 5px;
+	color: #d54e21;
+	content: "\f487";
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'dashicons';
+}
+
+.menu-top  a[href*="cm-wordpress-plugins-yearly-membership"]:before {
+	vertical-align: bottom;
+}
+
+.menu-top a[href*="cm-wordpress-plugins-yearly-membership"] {
+	color: white;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item {
+	width: 96%;
+	padding: 10px;
+	margin-bottom: 20px;
+	background: #fff;
+	border: 1px solid #ddd;
+	position: relative;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item .column {
+	float: left;
+	margin: 1%;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item .column.half {
+	width: 50%;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item .column.auto {
+	width: auto;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item .item-name {
+	min-width: 50%;
+	margin: 0 0 15px 0;
+	padding: 5px 10px;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item .item-code {
+	min-width: 95%;
+	min-height: 160px;
+	margin: 0;
+	padding: 5px 10px;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item .item-type {
+	display: unset;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item label {
+	display: block;
+	font-weight: bold;
+	padding-bottom: 7px;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item select {
+	color: #32373c;
+	margin: 0 0 15px 0;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item .cpt p {
+	font-weight: bold;
+	margin: 0 0 10px;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item .cpt ul.custom_post_types_checkboxes {
+	margin: 0;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item  .delete_item {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.toplevel_page_cm-handfsl .repeater .repeater-item  .delete_item:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'dashicons';
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	vertical-align: top;
+	-moz-transition: color .1s ease-in 0;
+	-webkit-transition: color .1s ease-in 0;
+	text-align: left;
+	content:'\f182';
+}

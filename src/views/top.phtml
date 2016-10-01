@@ -1,0 +1,31 @@
+<?php
+echo do_shortcode('[cminds_free_registration id="cmhandfsl"]');
+?>
+
+<div class="cminds_settings_description">
+    <p>
+        <strong><?php _e( 'Plugin Usage Instructions:', ComentarismoWP::$plugin_text_domain ); ?></strong> <a href="javascript:void(0)" onclick="jQuery(this).parent().next().slideToggle()"><?php _e( 'Show/Hide', ComentarismoWP::$plugin_text_domain ); ?></a>
+    </p>
+    <div style="display:none">
+        <ol>
+            <li><?php _e( 'Paste <strong>"Script Code"</strong>', ComentarismoWP::$plugin_text_domain ); ?></li>
+            <li><?php _e( 'Select <strong>"Script Type"</strong> (CSS or JS), <strong>"Script Location"</strong> (header or footer), and <strong>"Autoload Option"</strong> by default script will be displayed on all posts/pages', ComentarismoWP::$plugin_text_domain ); ?></li>
+            <li><?php _e( 'Click <strong>"Add New"</strong> if you want to define more scripts', ComentarismoWP::$plugin_text_domain ); ?></li>
+            <li><?php _e( 'Click <strong>"Save Changes"</strong>', ComentarismoWP::$plugin_text_domain ); ?></li>
+        </ol>
+    </div>
+
+    <div>
+        <div class="cmtt_field_message_container"></div>
+        <form method="post">
+            <input title="<?php _e( 'Warning! This option will completely erase all of the data stored by the Comentarismo in the database: items, options etc. <br/> It cannot be reverted."', ComentarismoWP::$plugin_text_domain ); ?>
+                   onclick="return confirm('<?php _e( 'All database items of Comentarismo (scripts, custom include settings) will be erased. This cannot be reverted.', ComentarismoWP::$plugin_text_domain ); ?>')"
+                   type="submit" name="<?php echo ComentarismoWP::$plugin_slug . '_cleanup'; ?>" value="<?php _e( 'Clenup database', ComentarismoWP::$plugin_text_domain ); ?>" class="button cmtt-cleanup-button"/>
+			<?php wp_nonce_field( ComentarismoWP::$plugin_slug . '_cleanup', ComentarismoWP::$plugin_slug . '_cleanup_nonce' ); ?>
+        </form>
+    </div>
+</div>
+
+<br/>
+
+<div class="clear"></div>
