@@ -3,9 +3,11 @@
 ## Welcome to Comentarismo WordPress Plugin
 
 This is the GitHub Repository for the Comentarismo Wordpress Plugin
+![ScreenShot](ss1.png)
 
 
 # License: [license.md](license.md)
+
 
 # Scripts:
 
