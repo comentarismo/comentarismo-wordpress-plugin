@@ -39,8 +39,8 @@ This is the GitHub Repository for the Comentarismo Wordpress Plugin
             debug: "true",
             forum: "comentarismo",
             table: "commentaries",
+            page: "%COMENTARISMO_PAGE%",
             operator: "g1",
-            page: "g1texas-comeca-2016-com-lei-que-permite-porte-aberto-de-armas",
             key: "HL3Q87OdXRXiun8LSyAy5vmCDJJCfyVrX97aIk_Ll2JcC0IG2yUpRoBOB7O6qRkDUAd6yQbD4gY="
         });
         comentarismo.connect();

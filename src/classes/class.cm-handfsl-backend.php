@@ -280,6 +280,8 @@ if ( !class_exists( 'ComentarismoWPBackend' ) ) {
 						//	$item_code = sanitize_text_field( $item[ 'item-code' ] );
 							$item_code = json_encode( $item[ 'item-code' ], JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE );
 
+                            //$item_code = addslashes( $item_code );
+
 							// Make sure it is compatible for all PHP versions and server configurations
 							if( ! get_magic_quotes_gpc() )
 							{

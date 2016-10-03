@@ -124,9 +124,14 @@ if ( ! class_exists( 'ComentarismoWPFrontend' ) ) {
 			if( has_filter( ComentarismoWP::$plugin_slug . '_hook_scripts_output' ) )
 			{
 				$output = apply_filters( ComentarismoWP::$plugin_slug . '_hook_scripts_output', $output );
-			}
+            }
 
-			echo $output;
+            $pos = strrpos($output, "%COMENTARISMO_PAGE%");
+            if ($pos !== false) {
+                $output = str_replace("%COMENTARISMO_PAGE%", get_permalink(), $output);
+            }
+
+            echo $output;
 
 		}
 

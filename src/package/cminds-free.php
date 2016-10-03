@@ -33,7 +33,7 @@ if ( !class_exists( __NAMESPACE__ . '\CmindsFreePackage' ) ) {
 
 			$aboutPageKey = $this->getPageSlug();
 			add_action( 'cminds-' . $aboutPageKey . '-content-1', array( $this, 'displayUserGuideTab' ) );
-//			add_action( 'cminds-' . $aboutPageKey . '-content-5', array( $this, 'displayUpgradeToProTab' ) );
+			add_action( 'cminds-' . $aboutPageKey . '-content-5', array( $this, 'displayUpgradeToProTab' ) );
 			add_action( 'cminds-' . $aboutPageKey . '-content-10', array( $this, 'displayCreativeMindsTab' ) );
 			add_action( 'cminds-' . $aboutPageKey . '-content-30', array( $this, 'displayMembershipTab' ) );
 			add_action( 'cminds-' . $aboutPageKey . '-content-40', array( $this, 'displayCMProductTab' ) );
@@ -620,9 +620,9 @@ if ( !class_exists( __NAMESPACE__ . '\CmindsFreePackage' ) ) {
 
 		public function updateMenu() {
 			add_submenu_page( $this->getOption( 'plugin-menu-item' ), __( 'User Guide', 'cminds-package' ), __( 'User Guide', 'cminds-package' ), 'manage_options', $this->getPageSlug(), array( $this, 'displayPage' ) );
-//			if ( !$this->getOption( 'plugin-free-only' ) ) {
-//				add_submenu_page( $this->getOption( 'plugin-menu-item' ), __( 'Upgrade To Pro', 'cminds-package' ), __( 'Upgrade To Pro', 'cminds-package' ), 'manage_options', $this->getProSlug(), array( $this, 'displayPage' ) );
-//			}
+			if ( !$this->getOption( 'plugin-free-only' ) ) {
+				add_submenu_page( $this->getOption( 'plugin-menu-item' ), __( 'Upgrade To Pro', 'cminds-package' ), __( 'Upgrade To Pro', 'cminds-package' ), 'manage_options', $this->getProSlug(), array( $this, 'displayPage' ) );
+			}
 
 			$tag		 = 'cminds-' . $this->getOption( 'plugin-short-slug' ) . '-license-page';
 			$condition	 = has_action( $tag );
@@ -2215,7 +2215,7 @@ if ( !class_exists( __NAMESPACE__ . '\CmindsFreePackage' ) ) {
 				<form action="<?php echo esc_url( admin_url( 'admin.php?page=cmtt_licensing' ) ); ?>" method="post" dir="ltr">
 					<p class="submit">
 						<input type="hidden" name="cminds_action" value="download_sysinfo" />
-						<?php submit_button( 'Download system information file', 'primary', 'cminds-download-sysinfo', false ); ?>
+						<?php submit_button( 'Download system information file', 'primary', 'comentarismo-download-sysinfo', false ); ?>
 					</p>
 					<textarea class="cminds_system_info_area" readonly="readonly" onclick="this.focus();
 			                this.select()" id="system-info-textarea" name="cminds-sysinfo" title="<?php _e( 'To copy the system info, click below then press Ctrl + C (PC) or Cmd + C (Mac).', 'edd' ); ?>">

@@ -14,12 +14,22 @@
         <div class="postbox">
             <h3><span>About Comentarismo</span></h3>
             <div class="inside">
-                <p><a href="<?php echo $this->addAffiliateCode('https://api.comentarismo.com/'); ?>" target="_blank">The
-                        Comentarismo team</a>
-                    specializes in creating cutting-edge WordPress Plugins and Magento® & Ecommerce Extensions, aimed to
-                    satisfy the growing needs
-                    of website administrators, designers and developers worldwide.</p>
-                <p>Comentarismo is ...
+                <p>
+                    <a href="<?php echo $this->addAffiliateCode('https://api.comentarismo.com/'); ?>" target="_blank">
+                        The Comentarismo team
+                    </a>
+                    specializes in creating cutting-edge Applications & Extensions, aimed to satisfy the growing needs of website administrators,
+                    designers, developers, publishers, bloggers worldwide.
+                </p>
+                <p>
+                    Comentarismo is a comment system that replaces your WordPress comment system with your comments hosted and powered by Comentarismo.
+                    Head over to the Comments admin page to set up your Comentarismo Comment System, and relax.
+                </p>
+                <p>
+                    With Comentarismo you have for free a Seamless comments platform, with free Sentiment Analysis that works with Big Data HTTP/JSON APIs
+                    and many integrations with Mobile platforms like Ionic 1, Ionic 2, Electron, Cordova, Phonegap, and many others.
+                    Comentarismo was designed having in mind a Intuitive and secure platform, We take care to provide you the best experience with comments,
+                </p>
                 <hr/>
                 <h4>Follow Comentarismo</h4>
                 <a href="https://twitter.com/comentarismo" class="twitter-follow-button" data-show-count="false"
@@ -56,7 +66,7 @@
                             return;
                         js = d.createElement(s);
                         js.id = id;
-                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=459655384109264";
+                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=118792195142376";
                         fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'facebook-jssdk') );</script>
 
